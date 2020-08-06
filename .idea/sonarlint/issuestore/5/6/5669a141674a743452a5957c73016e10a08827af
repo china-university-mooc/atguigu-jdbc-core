@@ -1,0 +1,10 @@
+
+squid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "conn".(Üä°Îÿÿÿÿÿ8…ÌÄø».
+]squid:S1118":Add a private constructor to hide the implicit public one.(ä¦”±øÿÿÿÿ8®Ý¸ø».
+Fsquid:S1148G"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8÷¨áú».
+Fsquid:S1148/"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Í«ßú».
+gsquid:UselessImportCheck"7Remove this unused import 'java.sql.PreparedStatement'.(òÄ™ƒÿÿÿÿÿ8æõßú».
+jsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(þ¸…çøÿÿÿÿ8†˜Äø».
+Fsquid:S1148("#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Í«ßú».
+Fsquid:S1148@"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8–Åàú».
+Fsquid:S11489"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8–Åàú».

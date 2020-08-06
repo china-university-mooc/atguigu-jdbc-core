@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="553c3a4c-fb1a-41dc-8636-9a3398100a28" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ffRMHFCocV80mgf2or8RJFrPen" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/01-connection/lib" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="gradle.experimental" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/01-connection/lib" />
+      <recent name="$PROJECT_DIR$/01-connection" />
+      <recent name="$PROJECT_DIR$/01-connection/resources" />
+      <recent name="$PROJECT_DIR$/02-statement/src/com/itutry/jdbc/demo1" />
+    </key>
+  </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="RunManager" selected="JUnit.BatchInsertTest.test3">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BatchInsertTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-connection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itutry.jdbc.demo5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itutry.jdbc.demo5" />
+      <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.demo5.BatchInsertTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BatchInsertTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-connection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itutry.jdbc.demo5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itutry.jdbc.demo5" />
+      <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.demo5.BatchInsertTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BatchInsertTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-connection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itutry.jdbc.demo5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itutry.jdbc.demo5" />
+      <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.demo5.BatchInsertTest" />
+      <option name="METHOD_NAME" value="test3" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlobTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-connection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itutry.jdbc.demo4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itutry.jdbc.demo4" />
+      <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.demo4.BlobTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlobTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="01-connection" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itutry.jdbc.demo4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itutry.jdbc.demo4" />
+      <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.demo4.BlobTest" />
+      <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BatchInsertTest.test3" />
+        <item itemvalue="JUnit.BatchInsertTest.test2" />
+        <item itemvalue="JUnit.BatchInsertTest.test1" />
+        <item itemvalue="JUnit.BlobTest.test2" />
+        <item itemvalue="JUnit.BlobTest.test1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:test@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:test@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@459d0176" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="553c3a4c-fb1a-41dc-8636-9a3398100a28" name="Default Changelist" comment="" />
+      <created>1596607111045</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596607111045</updated>
+      <workItem from="1596607116119" duration="7556000" />
+      <workItem from="1596635489701" duration="115000" />
+      <workItem from="1596635625968" duration="77000" />
+      <workItem from="1596635734272" duration="22766000" />
+      <workItem from="1596705118361" duration="8630000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596634890885">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596634890885" />
+    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1596693295855">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596646434752" />
+    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1596693295855" />
+    <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596646423271">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596646423271" />
+    <state width="1387" height="230" key="GridCell.Tab.0.bottom" timestamp="1596718522377">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1387" height="353" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596698087023" />
+    <state width="1387" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596718522377" />
+    <state width="1387" height="230" key="GridCell.Tab.0.center" timestamp="1596718522377">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1387" height="353" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596698087022" />
+    <state width="1387" height="230" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1596718522377" />
+    <state width="1387" height="230" key="GridCell.Tab.0.left" timestamp="1596718522376">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1387" height="353" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596698087021" />
+    <state width="1387" height="230" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1596718522376" />
+    <state width="1387" height="230" key="GridCell.Tab.0.right" timestamp="1596718522377">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1387" height="353" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596698087022" />
+    <state width="1387" height="230" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1596718522377" />
+    <state x="80" y="23" key="SettingsEditor" timestamp="1596717463932">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="80" y="23" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1596717463932" />
+    <state width="625" height="539" key="SwitcherDM" timestamp="1596718394122">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="625" height="564" key="SwitcherDM/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596646251713" />
+    <state width="625" height="539" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1596718394122" />
+    <state x="337" y="345" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1596634464245">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="337" y="345" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596634464245" />
+    <state x="337" y="345" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1440.877@0.23.1440.877" timestamp="1596607338690" />
+    <state x="0" y="23" key="new project wizard" timestamp="1596634417649">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="0" y="23" key="new project wizard/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596634417649" />
+    <state x="0" y="23" key="new project wizard/0.23.1440.877@0.23.1440.877" timestamp="1596607170809" />
+    <state x="301" y="23" width="838" height="877" key="search.everywhere.popup" timestamp="1596647068122">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="301" y="23" width="838" height="877" key="search.everywhere.popup/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596647068122" />
+    <state x="301" y="23" width="838" height="877" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1596608443250" />
+  </component>
+</project>

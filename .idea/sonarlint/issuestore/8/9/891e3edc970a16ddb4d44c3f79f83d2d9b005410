@@ -1,0 +1,10 @@
+
+Gsquid:S1148Ô"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8§²®“¼.
+nsquid:CommentedOutCodeLinel"<This block of commented-out lines of code should be removed.(®†çÛúÿÿÿÿ8÷ª¬“¼.
+jsquid:CommentedOutCodeLineÐ"<This block of commented-out lines of code should be removed.(ÃÒ¸ë8§²®“¼.
+Gsquid:S1148·"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8§²®“¼.
+nsquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(ÀçÓÊúÿÿÿÿ8ñÿ¬“¼.
+nsquid:CommentedOutCodeLineu"<This block of commented-out lines of code should be removed.(ÛÂì¬øÿÿÿÿ8÷ª¬“¼.
+hsquid:CallToDeprecatedMethod¥"3Remove this use of "newInstance"; it is deprecated.(ï‹¢¸þÿÿÿÿ8§²®“¼.
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Š¤”Öþÿÿÿÿ8®¨½‹¼.
+tsquid:UselessImportCheck"IRemove this unused import 'org.omg.PortableInterceptor.SYSTEM_EXCEPTION'.(öØÁ8÷œ±’¼.

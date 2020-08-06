@@ -1,0 +1,4 @@
+
+©%squid:RedundantThrowsDeclarationCheck"qRemove the declaration of thrown exception 'java.text.ParseException', as it cannot be thrown from method's body.(ַ״ץ8ÿצ‏¼.
+Fsquid:S11488"#Use a logger to log this exception.(€ֹװ…‎ÿÿÿÿ8הד¼.
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(׃ֱ¿‎ÿÿÿÿ8ÿצ‏¼.

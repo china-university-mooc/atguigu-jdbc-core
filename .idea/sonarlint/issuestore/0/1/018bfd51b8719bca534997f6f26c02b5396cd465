@@ -1,0 +1,22 @@
+
+ysquid:S2068."V'password' detected in this expression, review this potentially hard-coded credential.(£›Åşşÿÿÿÿ8³Ø³ê».
+Csquid:S2068E" Remove this hard-coded password.(Üä°Îÿÿÿÿÿ8Å‹âê».
+Csquid:S2068[" Remove this hard-coded password.(Üä°Îÿÿÿÿÿ8Òäê».
+lsquid:S1192"IDefine a constant instead of duplicating this literal "12345678" 4 times.(£›Åşşÿÿÿÿ8ˆÌáê».
+isquid:CommentedOutCodeLineQ"<This block of commented-out lines of code should be removed.(î²‘æ8îæèê».
+isquid:CommentedOutCodeLineS"<This block of commented-out lines of code should be removed.(ËìĞò8îæèê».
+bsquid:CallToDeprecatedMethod:"3Remove this use of "newInstance"; it is deprecated.(×˜µ²8›×İê».
+Ksquid:S4925%"-Remove this "Class.forName()", it is useless.(²“ÍÔ8íœ­ê».
+Psquid:S4925N"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8‚öê».
+ysquid:S2068B"V'password' detected in this expression, review this potentially hard-coded credential.(ĞÃöÑùÿÿÿÿ8£˜Šö».
+ysquid:S2068"V'password' detected in this expression, review this potentially hard-coded credential.(£›Åşşÿÿÿÿ8³›ê».
+bsquid:CallToDeprecatedMethod&"3Remove this use of "newInstance"; it is deprecated.(×˜µ²8²„¯ê».
+tsquid:S1192%"VDefine a constant instead of duplicating this literal "com.mysql.jdbc.Driver" 3 times.(²“ÍÔ8‚öê».
+esquid:S00112K"FDefine and throw a dedicated exception instead of using a generic one.(Ôú˜ã8Òäê».
+lsquid:S1192"IDefine a constant instead of duplicating this literal "password" 3 times.(£›Åşşÿÿÿÿ8ú™•ë».
+esquid:S00112e"FDefine and throw a dedicated exception instead of using a generic one.(›‚€Ù8ÿ“ë».
+squid:S1192"aDefine a constant instead of duplicating this literal "jdbc:mysql://localhost:3306/test" 4 times.(¶§ä8²–áê».
+Ksquid:S49259"-Remove this "Class.forName()", it is useless.(²“ÍÔ8›×İê».
+ysquid:S2068X"V'password' detected in this expression, review this potentially hard-coded credential.(ĞÃöÑùÿÿÿÿ8§Ò‘ö».
+jsquid:S00112#"FDefine and throw a dedicated exception instead of using a generic one.(ÙÓÆøúÿÿÿÿ8ÈÛµê».
+jsquid:S001127"FDefine and throw a dedicated exception instead of using a generic one.( ê¾ºÿÿÿÿÿ8â•Şê».
