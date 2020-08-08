@@ -15,7 +15,7 @@ public class CustomerDaoImplTest {
     Connection conn = null;
     try {
       conn = JdbcUtils.getConnection();
-      Customer cust = new Customer(1, "于小飞", "xfyu@126.com", new Date(1234567890L));
+      Customer cust = new Customer(null, "于小飞", "xfyu@126.com", new Date(1234567890L));
       dao.insert(conn, cust);
       System.out.println("添加成功");
     } catch (Exception e) {
@@ -31,7 +31,7 @@ public class CustomerDaoImplTest {
     try {
       conn = JdbcUtils.getConnection();
 
-      dao.deleteById(conn, 13);
+      dao.deleteById(conn, 29);
       System.out.println("删除成功");
     } catch (Exception e) {
       e.printStackTrace();
@@ -45,7 +45,7 @@ public class CustomerDaoImplTest {
     Connection conn = null;
     try {
       conn = JdbcUtils.getConnection();
-      Customer cust = new Customer(18, "贝多芬", "beiduofen@126.com", new Date(1234567890L));
+      Customer cust = new Customer(18, "莫扎特", "beiduofen@126.com", new Date(1234567890L));
       dao.update(conn, cust);
       System.out.println("");
     } catch (Exception e) {
