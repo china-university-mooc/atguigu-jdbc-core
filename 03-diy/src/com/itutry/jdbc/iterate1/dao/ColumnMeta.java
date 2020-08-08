@@ -1,6 +1,7 @@
-package com.itutry.jdbc.iterate1.util;
+package com.itutry.jdbc.iterate1.dao;
 
 import com.itutry.jdbc.iterate1.annotaion.Column;
+import com.itutry.jdbc.iterate1.util.JdbcUtils;
 import java.lang.reflect.Field;
 import java.util.Optional;
 

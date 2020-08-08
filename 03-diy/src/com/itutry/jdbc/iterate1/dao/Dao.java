@@ -1,4 +1,4 @@
-package com.itutry.jdbc.iterate1;
+package com.itutry.jdbc.iterate1.dao;
 
 import java.sql.Connection;
 import java.util.List;

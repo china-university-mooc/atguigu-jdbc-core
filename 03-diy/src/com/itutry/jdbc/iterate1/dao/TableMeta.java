@@ -1,4 +1,4 @@
-package com.itutry.jdbc.iterate1.util;
+package com.itutry.jdbc.iterate1.dao;
 
 import com.itutry.jdbc.iterate1.annotaion.Id;
 import com.itutry.jdbc.iterate1.annotaion.Table;
@@ -13,14 +13,12 @@ public class TableMeta {
 
   private static final String ID_NAME = "id";
 
-  private Class<?> type;
   private String name;
   private ColumnMeta idColumn;
   private List<ColumnMeta> plainColumns;
   private List<ColumnMeta> columns = new ArrayList<>();
 
   public TableMeta(Class<?> type) {
-    this.type = type;
     this.name = parseTableName(type);
     this.idColumn = parseIdColumn(type);
     this.plainColumns = parsePlainColumns(type);

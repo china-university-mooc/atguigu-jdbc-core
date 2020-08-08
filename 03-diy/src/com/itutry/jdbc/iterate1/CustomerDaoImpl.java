@@ -1,6 +1,7 @@
 package com.itutry.jdbc.iterate1;
 
 import com.itutry.jdbc.iterate1.bean.Customer;
+import com.itutry.jdbc.iterate1.dao.AbstractDao;
 import java.sql.Connection;
 import java.sql.Date;
 

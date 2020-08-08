@@ -1,12 +1,10 @@
-package com.itutry.jdbc.iterate1;
+package com.itutry.jdbc.iterate1.dao;
 
 import com.itutry.jdbc.iterate1.util.BeanListResultSetHandler;
 import com.itutry.jdbc.iterate1.util.BeanResultSetHandler;
-import com.itutry.jdbc.iterate1.util.ColumnMeta;
 import com.itutry.jdbc.iterate1.util.JdbcUtils;
 import com.itutry.jdbc.iterate1.util.QueryUtils;
 import com.itutry.jdbc.iterate1.util.ScalarResultSetHandler;
-import com.itutry.jdbc.iterate1.util.TableMeta;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.sql.Connection;
