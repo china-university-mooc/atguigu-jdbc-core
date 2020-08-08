@@ -1,9 +1,14 @@
 package com.itutry.jdbc.iterate1;
 
+import com.itutry.jdbc.iterate1.util.BeanListResultSetHandler;
+import com.itutry.jdbc.iterate1.util.BeanResultSetHandler;
 import com.itutry.jdbc.iterate1.util.QueryUtils;
+import com.itutry.jdbc.iterate1.util.ScalarResultSetHandler;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -21,18 +26,43 @@ public abstract class BaseDAO<T> {
   }
 
   protected int update(Connection conn, String sql, Object... args) {
-    return QueryUtils.update(conn, sql, args);
+    try {
+      return QueryUtils.update(conn, sql, args);
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return 0;
   }
 
   protected T getInstance(Connection conn, String sql, Object... args) {
-    return QueryUtils.queryBean(conn, type, sql, args);
+    try {
+      BeanResultSetHandler<T> handler = new BeanResultSetHandler<>(type);
+      return QueryUtils.query(conn, handler, sql, args);
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
   }
 
   protected List<T> getForList(Connection conn, String sql, Object... args) {
-    return QueryUtils.queryList(conn, type, sql, args);
+    try {
+      BeanListResultSetHandler<T> handler = new BeanListResultSetHandler<>(type);
+      return QueryUtils.query(conn, handler, sql, args);
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return Collections.emptyList();
   }
 
   protected <E> E getValue(Connection conn, String sql, Object... args) {
-    return QueryUtils.queryScalar(conn, sql, args);
+    try {
+      ScalarResultSetHandler handler = new ScalarResultSetHandler();
+      @SuppressWarnings("unchecked")
+      E result = (E) QueryUtils.query(conn, handler, sql, args);
+      return result;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
   }
 }

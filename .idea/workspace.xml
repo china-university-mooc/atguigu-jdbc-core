@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="553c3a4c-fb1a-41dc-8636-9a3398100a28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/BeanListResultSetHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/BeanResultSetHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/ScalarResultSetHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/CustomerDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/CustomerDaoImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/JdbcUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/BaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/BeanResultSetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/BeanResultSetHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/QueryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/QueryUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/ResultSetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/ResultSetHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +76,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -122,7 +118,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerDaoImplTest.getAll">
+  <component name="RunManager" selected="JUnit.CustomerDaoImplTest.getMaxBirth">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -180,17 +176,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QueryRunnerTest.test7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="02-transaction" />
+    <configuration name="CustomerDaoImplTest.getMaxBirth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="03-diy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itutry.jdbc.demo5.*" />
+          <option name="PATTERN" value="com.itutry.jdbc.iterate1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.itutry.jdbc.demo5" />
-      <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.demo5.QueryRunnerTest" />
-      <option name="METHOD_NAME" value="test7" />
+      <option name="PACKAGE_NAME" value="com.itutry.jdbc.iterate1" />
+      <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.iterate1.CustomerDaoImplTest" />
+      <option name="METHOD_NAME" value="getMaxBirth" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -232,11 +228,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomerDaoImplTest.getMaxBirth" />
         <item itemvalue="JUnit.CustomerDaoImplTest.getAll" />
         <item itemvalue="JUnit.CustomerDaoImplTest.count" />
         <item itemvalue="JUnit.CustomerDaoImplTest.getById" />
         <item itemvalue="JUnit.QueryRunnerTest.test8" />
-        <item itemvalue="JUnit.QueryRunnerTest.test7" />
       </list>
     </recent_temporary>
   </component>
@@ -277,7 +273,7 @@
       <workItem from="1596635625968" duration="77000" />
       <workItem from="1596635734272" duration="22766000" />
       <workItem from="1596705118361" duration="23225000" />
-      <workItem from="1596790887003" duration="13996000" />
+      <workItem from="1596790887003" duration="14977000" />
     </task>
     <servers />
   </component>
@@ -303,26 +299,30 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="121" y="100" width="1152" height="701" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1596847894601" />
-    <state width="1387" height="307" key="GridCell.Tab.0.bottom" timestamp="1596848452646">
+    <state width="1387" height="307" key="GridCell.Tab.0.bottom" timestamp="1596849805085">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943766" />
-    <state width="1387" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596848452646" />
-    <state width="1387" height="307" key="GridCell.Tab.0.center" timestamp="1596848452645">
+    <state width="1387" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596849805085" />
+    <state width="1387" height="307" key="GridCell.Tab.0.center" timestamp="1596849805084">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943765" />
-    <state width="1387" height="307" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1596848452645" />
-    <state width="1387" height="307" key="GridCell.Tab.0.left" timestamp="1596848452645">
+    <state width="1387" height="307" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1596849805084" />
+    <state width="1387" height="307" key="GridCell.Tab.0.left" timestamp="1596849805084">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943764" />
-    <state width="1387" height="307" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1596848452644" />
-    <state width="1387" height="307" key="GridCell.Tab.0.right" timestamp="1596848452646">
+    <state width="1387" height="307" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1596849805084" />
+    <state width="1387" height="307" key="GridCell.Tab.0.right" timestamp="1596849805085">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943765" />
-    <state width="1387" height="307" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1596848452646" />
+    <state width="1387" height="307" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1596849805085" />
+    <state x="501" y="381" key="ReplaceDuplicatesPrompt" timestamp="1596848889203">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="501" y="381" key="ReplaceDuplicatesPrompt/0.23.1440.877@0.23.1440.877" timestamp="1596848889203" />
     <state x="210" y="114" width="974" height="694" key="RollbackChangesDialog" timestamp="1596847389562">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -332,16 +332,16 @@
     </state>
     <state x="80" y="23" width="1199" height="877" key="SettingsEditor/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596725322104" />
     <state x="80" y="23" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1596717463932" />
-    <state x="382" y="138" width="681" height="655" key="StructurePopup" timestamp="1596808640422">
+    <state x="382" y="138" width="681" height="655" key="StructurePopup" timestamp="1596849440409">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="382" y="138" width="681" height="655" key="StructurePopup/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596731128897" />
-    <state x="382" y="138" width="681" height="655" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1596808640422" />
-    <state width="625" height="614" key="SwitcherDM" timestamp="1596847472259">
+    <state x="382" y="138" width="681" height="655" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1596849440409" />
+    <state width="625" height="614" key="SwitcherDM" timestamp="1596849635769">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="625" height="614" key="SwitcherDM/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596809963507" />
-    <state width="625" height="614" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1596847472259" />
+    <state width="625" height="614" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1596849635769" />
     <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1596847894601">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -355,6 +355,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="473" y="151" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596732790419" />
+    <state x="395" y="183" width="649" height="582" key="extract.method.dialog" timestamp="1596848884991">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="395" y="183" width="649" height="582" key="extract.method.dialog/0.23.1440.877@0.23.1440.877" timestamp="1596848884991" />
     <state x="0" y="23" key="new project wizard" timestamp="1596845988798">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
-class BeanResultSetHandler<T> implements ResultSetHandler<T> {
+public class BeanResultSetHandler<T> implements ResultSetHandler<T> {
 
   private final Class<T> type;
 

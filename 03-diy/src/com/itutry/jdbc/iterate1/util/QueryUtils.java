@@ -3,60 +3,43 @@ package com.itutry.jdbc.iterate1.util;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.List;
+import java.sql.SQLException;
 
 public class QueryUtils {
 
-  public static int update(Connection conn, String sql, Object... args) {
+  public static int update(Connection conn, String sql, Object... params) throws SQLException {
     PreparedStatement ps = null;
+    int rows;
     try {
       ps = conn.prepareStatement(sql);
-      for (int i = 0; i < args.length; i++) {
-        ps.setObject(i + 1, args[i]);
-      }
-
-      return ps.executeUpdate();
-    } catch (Exception e) {
-      e.printStackTrace();
+      fillStatement(ps, params);
+      rows = ps.executeUpdate();
     } finally {
       JdbcUtils.closeQuietly(ps);
     }
-    return 0;
+    return rows;
   }
 
-  public static <T> List<T> queryList(Connection conn, Class<T> type, String sql, Object... args) {
-    BeanListResultSetHandler<T> handler = new BeanListResultSetHandler<>(type);
-    return query(conn, handler, sql, args);
-  }
-
-  public static <T> T queryBean(Connection conn, Class<T> type, String sql, Object... args) {
-    BeanResultSetHandler<T> handler = new BeanResultSetHandler<>(type);
-    return query(conn, handler, sql, args);
-  }
-
-  public static <E> E queryScalar(Connection conn, String sql, Object... args) {
-    ScalarResultSetHandler handler = new ScalarResultSetHandler();
-    return (E) QueryUtils.query(conn, handler, sql, args);
-  }
-
-  private static <T> T query(Connection conn, ResultSetHandler<T> rsHandler, String sql,
-      Object... args) {
+  public static <T> T query(Connection conn, ResultSetHandler<T> rsHandler, String sql,
+      Object... params) throws SQLException {
     PreparedStatement ps = null;
     ResultSet rs = null;
+    T result;
     try {
       ps = conn.prepareStatement(sql);
-      for (int i = 0; i < args.length; i++) {
-        ps.setObject(i + 1, args[i]);
-      }
-
+      fillStatement(ps, params);
       rs = ps.executeQuery();
-      return rsHandler.handle(rs);
-    } catch (Exception e) {
-      e.printStackTrace();
+      result = rsHandler.handle(rs);
     } finally {
       JdbcUtils.closeQuietly(null, ps, rs);
     }
 
-    return null;
+    return result;
+  }
+
+  private static void fillStatement(PreparedStatement ps, Object[] params) throws SQLException {
+    for (int i = 0; i < params.length; i++) {
+      ps.setObject(i + 1, params[i]);
+    }
   }
 }
