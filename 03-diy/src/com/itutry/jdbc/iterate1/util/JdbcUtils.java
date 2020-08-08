@@ -32,12 +32,30 @@ public class JdbcUtils {
     return dataSource.getConnection();
   }
 
+  public static void close(Connection conn) throws SQLException {
+    if (conn != null) {
+      conn.close();
+    }
+  }
+
+  public static void close(Statement ps) throws SQLException {
+    if (ps != null) {
+      ps.close();
+    }
+  }
+
+  public static void close(ResultSet rs) throws SQLException {
+    if (rs != null) {
+      rs.close();
+    }
+  }
+
   public static void closeQuietly(Connection conn) {
     if (conn != null) {
       try {
         conn.close();
       } catch (SQLException e) {
-        e.printStackTrace();
+        quietlyHandleSQLException(e);
       }
     }
   }
@@ -47,7 +65,7 @@ public class JdbcUtils {
       try {
         ps.close();
       } catch (SQLException e) {
-        e.printStackTrace();
+        quietlyHandleSQLException(e);
       }
     }
   }
@@ -57,7 +75,7 @@ public class JdbcUtils {
       try {
         rs.close();
       } catch (SQLException e) {
-        e.printStackTrace();
+        quietlyHandleSQLException(e);
       }
     }
   }
@@ -67,22 +85,26 @@ public class JdbcUtils {
       try {
         ps.close();
       } catch (SQLException e) {
-        e.printStackTrace();
+        quietlyHandleSQLException(e);
       }
     }
     if (conn != null) {
       try {
         conn.close();
       } catch (SQLException e) {
-        e.printStackTrace();
+        quietlyHandleSQLException(e);
       }
     }
     if (rs != null) {
       try {
         rs.close();
       } catch (SQLException e) {
-        e.printStackTrace();
+        quietlyHandleSQLException(e);
       }
     }
+  }
+
+  public static void quietlyHandleSQLException(SQLException e) {
+    throw new RuntimeException(e);
   }
 }

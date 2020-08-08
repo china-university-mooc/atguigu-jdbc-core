@@ -2,6 +2,7 @@ package com.itutry.jdbc.iterate1;
 
 import com.itutry.jdbc.iterate1.util.BeanListResultSetHandler;
 import com.itutry.jdbc.iterate1.util.BeanResultSetHandler;
+import com.itutry.jdbc.iterate1.util.JdbcUtils;
 import com.itutry.jdbc.iterate1.util.QueryUtils;
 import com.itutry.jdbc.iterate1.util.ScalarResultSetHandler;
 import java.lang.reflect.ParameterizedType;
@@ -20,7 +21,6 @@ public abstract class BaseDAO<T> {
 
   public BaseDAO() {
     ParameterizedType genericSuperclass = (ParameterizedType) getClass().getGenericSuperclass();
-    // 获取父类的类型参数
     Type[] actualTypeArguments = genericSuperclass.getActualTypeArguments();
     type = (Class<T>) actualTypeArguments[0];
   }
@@ -29,7 +29,7 @@ public abstract class BaseDAO<T> {
     try {
       return QueryUtils.update(conn, sql, args);
     } catch (SQLException e) {
-      e.printStackTrace();
+      JdbcUtils.quietlyHandleSQLException(e);
     }
     return 0;
   }
@@ -39,7 +39,7 @@ public abstract class BaseDAO<T> {
       BeanResultSetHandler<T> handler = new BeanResultSetHandler<>(type);
       return QueryUtils.query(conn, handler, sql, args);
     } catch (SQLException e) {
-      e.printStackTrace();
+      JdbcUtils.quietlyHandleSQLException(e);
     }
     return null;
   }
@@ -49,7 +49,7 @@ public abstract class BaseDAO<T> {
       BeanListResultSetHandler<T> handler = new BeanListResultSetHandler<>(type);
       return QueryUtils.query(conn, handler, sql, args);
     } catch (SQLException e) {
-      e.printStackTrace();
+      JdbcUtils.quietlyHandleSQLException(e);
     }
     return Collections.emptyList();
   }
@@ -61,7 +61,7 @@ public abstract class BaseDAO<T> {
       E result = (E) QueryUtils.query(conn, handler, sql, args);
       return result;
     } catch (SQLException e) {
-      e.printStackTrace();
+      JdbcUtils.quietlyHandleSQLException(e);
     }
     return null;
   }

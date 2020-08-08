@@ -15,7 +15,7 @@ public class QueryUtils {
       fillStatement(ps, params);
       rows = ps.executeUpdate();
     } finally {
-      JdbcUtils.closeQuietly(ps);
+      JdbcUtils.close(ps);
     }
     return rows;
   }
@@ -31,7 +31,11 @@ public class QueryUtils {
       rs = ps.executeQuery();
       result = rsHandler.handle(rs);
     } finally {
-      JdbcUtils.closeQuietly(null, ps, rs);
+      try {
+        JdbcUtils.close(rs);
+      } finally {
+        JdbcUtils.close(ps);
+      }
     }
 
     return result;
