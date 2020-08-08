@@ -1,6 +1,7 @@
 package com.itutry.jdbc.iterate1;
 
 import com.itutry.jdbc.iterate1.annotaion.Column;
+import com.itutry.jdbc.iterate1.annotaion.Id;
 import com.itutry.jdbc.iterate1.annotaion.Table;
 import com.itutry.jdbc.iterate1.util.BeanListResultSetHandler;
 import com.itutry.jdbc.iterate1.util.BeanResultSetHandler;
@@ -23,6 +24,13 @@ import java.util.stream.Collectors;
 public abstract class AbstractDao<T> implements Dao<T> {
 
   private static final String ID = "id";
+  public static final String INSERT_TEMPLATE = "insert into `%s`(%s) values (%s)";
+  public static final String DELETE_BY_ID_TEMPLATE = "delete from `%s` where %s";
+  public static final String UPDATE_BY_ID_TEMPLATE = "update `%s` set %s where %s";
+  public static final String GET_BY_ID_TEMPLATE = "select %s from `%s` where %s";
+  public static final String GET_ALL_TEMPLATE = "select %s from `%s`";
+  public static final String COUNT_TEMPLATE = "select count(*) from `%s`";
+
   private final Class<T> type;
 
   public AbstractDao() {
@@ -41,51 +49,49 @@ public abstract class AbstractDao<T> implements Dao<T> {
         .collect(Collectors.joining(","));
     Object[] values = getValues(obj, Arrays.asList(fields));
 
-    String template = "insert into %s(%s) values (%s)";
-    String sql = String.format(template, getTableName(type), insertClause, placeholderStr);
+    String sql = String.format(INSERT_TEMPLATE, getTableName(type), insertClause, placeholderStr);
     System.out.println(sql);
     return update(conn, sql, values);
   }
 
-  public void deleteById(Connection conn, Object id) {
-    String template = "delete from %s where id = ?";
-    String sql = String.format(template, getTableName(type));
+  public int deleteById(Connection conn, Object id) {
+    String whereClause = getColumnName(getIdField(type)) + " = ?";
+    String sql = String.format(DELETE_BY_ID_TEMPLATE, getTableName(type), whereClause);
     System.out.println(sql);
-    update(conn, sql, id);
+    return update(conn, sql, id);
   }
 
-  public void update(Connection conn, T obj) {
+  public int update(Connection conn, T obj) {
     String setClause = getOtherFields(type).stream()
         .map(field -> getColumnName(field) + " = ?")
         .collect(Collectors.joining(", "));
+
+    String whereClause = getColumnName(getIdField(type)) + " = ?";
 
     List<Field> fields = getOtherFields(type);
     fields.add(getIdField(type));
     Object[] values = getValues(obj, fields);
 
-    String template = "update %s set %s where id = ?";
-    String sql = String.format(template, getTableName(type), setClause);
+    String sql = String.format(UPDATE_BY_ID_TEMPLATE, getTableName(type), setClause, whereClause);
     System.out.println(sql);
-    update(conn, sql, values);
+    return update(conn, sql, values);
   }
 
   public T getById(Connection conn, Object id) {
-    String template = "select %s from %s where id = ?";
-    String sql = String.format(template, getSelectionStr(type), getTableName(type));
+    String whereClause = getColumnName(getIdField(type)) + " = ?";
+    String sql = String.format(GET_BY_ID_TEMPLATE, getSelectionStr(type), getTableName(type), whereClause);
     System.out.println(sql);
     return getInstance(conn, sql, id);
   }
 
   public List<T> getAll(Connection conn) {
-    String template = "select %s from %s";
-    String sql = String.format(template, getSelectionStr(type), getTableName(type));
+    String sql = String.format(GET_ALL_TEMPLATE, getSelectionStr(type), getTableName(type));
     System.out.println(sql);
     return getForList(conn, sql);
   }
 
   public Long count(Connection conn) {
-    String template = "select count(*) from %s";
-    String sql = String.format(template, getTableName(type));
+    String sql = String.format(COUNT_TEMPLATE, getTableName(type));
     System.out.println(sql);
     return getValue(conn, sql);
   }
@@ -108,17 +114,25 @@ public abstract class AbstractDao<T> implements Dao<T> {
   }
 
   private Field getIdField(Class<?> type) {
-    try {
-      return type.getDeclaredField(ID);
-    } catch (NoSuchFieldException e) {
-      JdbcUtils.quietlyHandleException(e);
+    List<Field> fields = Arrays.stream(type.getDeclaredFields())
+        .filter(this::isIdField)
+        .collect(Collectors.toList());
+    if (fields.size() == 1) {
+      return fields.get(0);
     }
-    return null;
+
+    throw new RuntimeException("表中ID列的个数不为一");
+  }
+
+  private boolean isIdField(Field field) {
+    boolean hasAnno = Arrays.stream(field.getAnnotations())
+        .anyMatch(a -> a instanceof Id);
+    return hasAnno || ID.equalsIgnoreCase(field.getName());
   }
 
   private List<Field> getOtherFields(Class<?> type) {
     return Arrays.stream(type.getDeclaredFields())
-        .filter(field -> !"id".equalsIgnoreCase(field.getName()))
+        .filter(field -> !isIdField(field))
         .collect(Collectors.toList());
   }
 

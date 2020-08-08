@@ -1,4 +1,4 @@
-package com.itutry.jdbc.iterate1;
+package com.itutry.jdbc.iterate1.bean;
 
 import com.itutry.jdbc.iterate1.annotaion.Table;
 import java.sql.Date;

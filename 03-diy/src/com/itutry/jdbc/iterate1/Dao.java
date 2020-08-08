@@ -7,9 +7,9 @@ public interface Dao<T> {
 
   int insert(Connection conn, T obj);
 
-  void deleteById(Connection conn, Object id);
+  int deleteById(Connection conn, Object id);
 
-  void update(Connection conn, T obj);
+  int update(Connection conn, T obj);
 
   T getById(Connection conn, Object id);
 
