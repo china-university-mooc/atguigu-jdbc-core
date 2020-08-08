@@ -1,4 +1,4 @@
-package com.itutry.jdbc.demo2;
+package com.itutry.jdbc.demo3;
 
 import com.itutry.jdbc.bean.Customer;
 import com.itutry.jdbc.util.JDBCUtils;
@@ -60,7 +60,7 @@ public class CustomerDAOImplTest {
   public void getById() {
     Connection conn = null;
     try {
-      conn = JDBCUtils.getConnection();
+      conn = JDBCUtils.getConnection3();
 
       Customer cust = dao.getById(conn, 19);
       System.out.println(cust);

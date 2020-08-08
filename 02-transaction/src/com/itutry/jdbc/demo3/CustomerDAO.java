@@ -1,4 +1,4 @@
-package com.itutry.jdbc.demo2;
+package com.itutry.jdbc.demo3;
 
 import com.itutry.jdbc.bean.Customer;
 import java.sql.Connection;

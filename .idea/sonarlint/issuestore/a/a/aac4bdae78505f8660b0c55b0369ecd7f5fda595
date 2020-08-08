@@ -1,0 +1,9 @@
+
+isquid:S1192"FDefine a constant instead of duplicating this literal "name_" 3 times.(ïÜĞ·øÿÿÿÿ8ËÃà¼.
+Fsquid:S1148h"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ôÆ³¼.
+msquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÀÖĞ½8ËÃà¼.
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Š¤”Öşÿÿÿÿ8Ë©Á¼.
+Fsquid:S1148B"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8‹¾ì¼.
+tsquid:S1192 "VDefine a constant instead of duplicating this literal "èŠ±è´¹çš„æ—¶é—´ä¸ºï¼š" 3 times.(ˆú–Ö8ËÃà¼.
+€squid:S1192"bDefine a constant instead of duplicating this literal "insert into goods(name) values(?)" 3 times.(ŞÁÈ¼8ËÃà¼.
+]squid:UselessImportCheck"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8ûá¼.

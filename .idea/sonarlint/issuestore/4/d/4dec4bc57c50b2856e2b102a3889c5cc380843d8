@@ -1,0 +1,6 @@
+
+nsquid:CommentedOutCodeLine/"<This block of commented-out lines of code should be removed.(Ýì‡Šÿÿÿÿÿ8þô¯™¼.
+esquid:S2095-"GUse try-with-resources or close this "ResultSet" in a "finally" clause.(·¦Ã…8ÀÄ¢™¼.
+msquid:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÀÖÐ½8œÚ™¼.
+msquid:S2095*"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(ÀÖÐ½8ÃÕ ™¼.
+lsquid:S2095>"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(Ñ¯ò–8ÎØÈ™¼.

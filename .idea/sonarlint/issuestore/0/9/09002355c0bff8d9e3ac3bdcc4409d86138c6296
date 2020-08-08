@@ -1,7 +1,7 @@
 
-nsquid:CommentedOutCodeLineh"<This block of commented-out lines of code should be removed.(™ÚÈûÿÿÿÿ8ÈÄãú».
-esquid:UselessImportCheck"5Remove this unused import 'java.lang.reflect.Method'.(Í“¯äüÿÿÿÿ8‚°åû».
-Fsquid:S1148E"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ð²û».
-nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¸”ü¶øÿÿÿÿ8Šƒ‰ü».
 Fsquid:S1148n"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8ÈÄãú».
+Fsquid:S1148E"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8Ð²û».
+esquid:UselessImportCheck"5Remove this unused import 'java.lang.reflect.Method'.(Í“¯äüÿÿÿÿ8‚°åû».
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¸”ü¶øÿÿÿÿ8Šƒ‰ü».
 isquid:CommentedOutCodeLinef"<This block of commented-out lines of code should be removed.(ŸÌþõ8þÅêú».
+nsquid:CommentedOutCodeLineh"<This block of commented-out lines of code should be removed.(™ÚÈûÿÿÿÿ8ÈÄãú».

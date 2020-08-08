@@ -1,22 +1,35 @@
-package com.itutry.jdbc.demo2;
+package com.itutry.jdbc.bean;
 
 public class User {
 
 	private String user;
 	private String password;
+	private int balance;
 
 	public User() {
 	}
 
-	public User(String user, String password) {
-		super();
+	public User(String user, String password, int balance) {
 		this.user = user;
 		this.password = password;
+		this.balance = balance;
 	}
 
 	@Override
 	public String toString() {
-		return "User [user=" + user + ", password=" + password + "]";
+		return "User{" +
+				"user='" + user + '\'' +
+				", password='" + password + '\'' +
+				", balance=" + balance +
+				'}';
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
 	}
 
 	public String getUser() {

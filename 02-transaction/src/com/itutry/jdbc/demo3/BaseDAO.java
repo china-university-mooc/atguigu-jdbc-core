@@ -1,7 +1,9 @@
-package com.itutry.jdbc.demo2;
+package com.itutry.jdbc.demo3;
 
 import com.itutry.jdbc.util.JDBCUtils;
 import java.lang.reflect.Field;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +16,16 @@ import java.util.List;
 /**
  * 封装了针对数据表的通用操作
  */
-public abstract class BaseDAO {
+public abstract class BaseDAO<T> {
+
+  private final Class<T> clazz;
+
+  public BaseDAO() {
+    ParameterizedType genericSuperclass = (ParameterizedType) getClass().getGenericSuperclass();
+    // 获取父类的类型参数
+    Type[] actualTypeArguments = genericSuperclass.getActualTypeArguments();
+    clazz = (Class<T>) actualTypeArguments[0];
+  }
 
   public int update(Connection conn, String sql, Object... args) {
     PreparedStatement ps = null;
@@ -37,7 +48,7 @@ public abstract class BaseDAO {
     return 0;
   }
 
-  public <T> T getInstance(Connection conn, Class<T> clazz, String sql, Object... args) {
+  public T getInstance(Connection conn, String sql, Object... args) {
     PreparedStatement ps = null;
     ResultSet rs = null;
     try {
@@ -84,7 +95,7 @@ public abstract class BaseDAO {
     return null;
   }
 
-  public <T> List<T> getForList(Connection conn, Class<T> clazz, String sql, Object... args) {
+  public List<T> getForList(Connection conn, String sql, Object... args) {
     PreparedStatement ps = null;
     ResultSet rs = null;
     try {

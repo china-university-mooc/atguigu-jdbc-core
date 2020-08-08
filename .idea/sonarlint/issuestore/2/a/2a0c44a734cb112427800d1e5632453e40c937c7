@@ -3,5 +3,5 @@ Gsquid:S1148…"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8îËŠ¼.
 isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(¿½ó8óÉÓ‰¼.
 isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(şÑˆÉ8Şïï‰¼.
 gsquid:CallToDeprecatedMethods"3Remove this use of "newInstance"; it is deprecated.(ï‹¢¸şÿÿÿÿ8ÇÛ­‰¼.
-gsquid:CallToDeprecatedMethod@"3Remove this use of "newInstance"; it is deprecated.(ï‹¢¸şÿÿÿÿ8Ò¢Ø‰¼.
 Fsquid:S1148R"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ò¢Ø‰¼.
+gsquid:CallToDeprecatedMethod@"3Remove this use of "newInstance"; it is deprecated.(ï‹¢¸şÿÿÿÿ8Ò¢Ø‰¼.
