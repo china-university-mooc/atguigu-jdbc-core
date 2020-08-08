@@ -55,7 +55,7 @@ public class JdbcUtils {
       try {
         conn.close();
       } catch (SQLException e) {
-        quietlyHandleSQLException(e);
+        quietlyHandleException(e);
       }
     }
   }
@@ -65,7 +65,7 @@ public class JdbcUtils {
       try {
         ps.close();
       } catch (SQLException e) {
-        quietlyHandleSQLException(e);
+        quietlyHandleException(e);
       }
     }
   }
@@ -75,7 +75,7 @@ public class JdbcUtils {
       try {
         rs.close();
       } catch (SQLException e) {
-        quietlyHandleSQLException(e);
+        quietlyHandleException(e);
       }
     }
   }
@@ -85,26 +85,26 @@ public class JdbcUtils {
       try {
         ps.close();
       } catch (SQLException e) {
-        quietlyHandleSQLException(e);
+        quietlyHandleException(e);
       }
     }
     if (conn != null) {
       try {
         conn.close();
       } catch (SQLException e) {
-        quietlyHandleSQLException(e);
+        quietlyHandleException(e);
       }
     }
     if (rs != null) {
       try {
         rs.close();
       } catch (SQLException e) {
-        quietlyHandleSQLException(e);
+        quietlyHandleException(e);
       }
     }
   }
 
-  public static void quietlyHandleSQLException(SQLException e) {
+  public static void quietlyHandleException(Exception e) {
     throw new RuntimeException(e);
   }
 }

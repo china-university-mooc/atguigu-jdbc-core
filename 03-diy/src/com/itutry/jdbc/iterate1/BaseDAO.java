@@ -29,7 +29,7 @@ public abstract class BaseDAO<T> {
     try {
       return QueryUtils.update(conn, sql, args);
     } catch (SQLException e) {
-      JdbcUtils.quietlyHandleSQLException(e);
+      JdbcUtils.quietlyHandleException(e);
     }
     return 0;
   }
@@ -39,7 +39,7 @@ public abstract class BaseDAO<T> {
       BeanResultSetHandler<T> handler = new BeanResultSetHandler<>(type);
       return QueryUtils.query(conn, handler, sql, args);
     } catch (SQLException e) {
-      JdbcUtils.quietlyHandleSQLException(e);
+      JdbcUtils.quietlyHandleException(e);
     }
     return null;
   }
@@ -49,7 +49,7 @@ public abstract class BaseDAO<T> {
       BeanListResultSetHandler<T> handler = new BeanListResultSetHandler<>(type);
       return QueryUtils.query(conn, handler, sql, args);
     } catch (SQLException e) {
-      JdbcUtils.quietlyHandleSQLException(e);
+      JdbcUtils.quietlyHandleException(e);
     }
     return Collections.emptyList();
   }
@@ -61,7 +61,7 @@ public abstract class BaseDAO<T> {
       E result = (E) QueryUtils.query(conn, handler, sql, args);
       return result;
     } catch (SQLException e) {
-      JdbcUtils.quietlyHandleSQLException(e);
+      JdbcUtils.quietlyHandleException(e);
     }
     return null;
   }
