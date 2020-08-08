@@ -2,69 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="553c3a4c-fb1a-41dc-8636-9a3398100a28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/0645ef71d5d1aa2bd3ec934cb0d3ef1ffd4d95a9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/8/086f22148e88c8539964a9d1751ff98c1eb087c6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/0999f06a59b2d29d5f026c299fe870d2bdadffb2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/143208452e0534b74ededd29a4d940e6c8a4da14" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/2207b7c25e65b6e47b5a1026ce17d9418989152d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3deb0992d7ddbf463e46a638894050644229be6e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/473629fd450ff0dafde71fe3826eadda3b0e9482" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b5cd27e4ad4881983523e19a60831f9eb3c4e93" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4dec4bc57c50b2856e2b102a3889c5cc380843d8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/e/4e510741c76abd5ba7ad5980fe7fc476b0bc7e98" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5cfd0160bdc31d0d1c64da7803a4ea51ff691759" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67ae7c09eca4d29c50a14e94d78476f5fca97392" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fbb726ed47b618878f3187a369f5e0a789148d6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aac4bdae78505f8660b0c55b0369ecd7f5fda595" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c76242e40e8ddf7346c551001f5d1bd2f9d972c9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/ce05b45ae67655f6be980e21f58d9fbd0fdc732f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9df737eeaf165498fb4d7cffa539f51b501b0a1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1f589f265a4d4412a2716dc083b253a57196c30" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e33f703da993b377ecce7539cde93235882adc33" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/d/ed582c50aa02067769a36093339db0ff27dded67" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/03-diy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/lib/druid-1.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/lib/mysql-connector-java-5.1.37-bin.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/BaseDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/CustomerDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/CustomerDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/CustomerDaoImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/JdbcUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/QueryUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/druid.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/09002355c0bff8d9e3ac3bdcc4409d86138c6296" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/09002355c0bff8d9e3ac3bdcc4409d86138c6296" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a0c44a734cb112427800d1e5632453e40c937c7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a0c44a734cb112427800d1e5632453e40c937c7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/7/a7290ed32f75c50ccb8694470bb31952aab75887" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/7/a7290ed32f75c50ccb8694470bb31952aab75887" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f47f0805d1cfe71eb650d8a7483cd360bf2dc932" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f47f0805d1cfe71eb650d8a7483cd360bf2dc932" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/BeanListResultSetHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/BeanResultSetHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/ScalarResultSetHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/02-transaction.iml" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/02-transaction.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/c3p0-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/c3p0-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/c3p0.properties" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/c3p0.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/bean/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo1/ConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo1/ConnectionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo1/IsolationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo1/IsolationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo1/TransactionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo1/TransactionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo2/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo2/BaseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo2/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo2/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo2/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo2/CustomerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo2/CustomerDAOImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo2/CustomerDAOImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo3/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo3/BaseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo3/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo3/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo3/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo3/CustomerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo3/CustomerDAOImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo3/CustomerDAOImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo4/C3P0Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo4/C3P0Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo4/DBCPTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo4/DBCPTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo4/DruidTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo4/DruidTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo5/QueryRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/demo5/QueryRunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/util/DAOUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/com/itutry/jdbc/util/JDBCUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/dbcp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/dbcp.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-transaction/src/druid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/02-transaction/src/druid.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/CustomerDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/CustomerDaoImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/JdbcUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/QueryUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/QueryUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/ResultSetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/ResultSetHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,11 +129,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomerDaoImplTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerDaoImplTest.count" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="03-diy" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.itutry.jdbc.iterate1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.itutry.jdbc.iterate1" />
+      <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.iterate1.CustomerDaoImplTest" />
+      <option name="METHOD_NAME" value="count" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerDaoImplTest.getAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="03-diy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itutry.jdbc.iterate1.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -205,30 +167,13 @@
       <module name="03-diy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itutry.jdbc.iterate1.*" />
+          <option name="PATTERN" value="com.itutry.jdbc.iterate1.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.itutry.jdbc.iterate1" />
       <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.iterate1.CustomerDaoImplTest" />
       <option name="METHOD_NAME" value="getById" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QueryRunnerTest.test6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="02-transaction" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itutry.jdbc.demo5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.itutry.jdbc.demo5" />
-      <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.demo5.QueryRunnerTest" />
-      <option name="METHOD_NAME" value="test6" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -288,10 +233,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CustomerDaoImplTest.getAll" />
+        <item itemvalue="JUnit.CustomerDaoImplTest.count" />
         <item itemvalue="JUnit.CustomerDaoImplTest.getById" />
         <item itemvalue="JUnit.QueryRunnerTest.test8" />
         <item itemvalue="JUnit.QueryRunnerTest.test7" />
-        <item itemvalue="JUnit.QueryRunnerTest.test6" />
       </list>
     </recent_temporary>
   </component>
@@ -332,7 +277,7 @@
       <workItem from="1596635625968" duration="77000" />
       <workItem from="1596635734272" duration="22766000" />
       <workItem from="1596705118361" duration="23225000" />
-      <workItem from="1596790887003" duration="12201000" />
+      <workItem from="1596790887003" duration="13996000" />
     </task>
     <servers />
   </component>
@@ -344,36 +289,44 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="320" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596634890885" />
-    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1596808115829">
+    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1596848272313">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596734538046" />
-    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1596808115829" />
-    <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596846611793">
+    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1596848272313" />
+    <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596848667593">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596646423271" />
-    <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1596846611793" />
-    <state width="1387" height="307" key="GridCell.Tab.0.bottom" timestamp="1596847124948">
+    <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1596848667593" />
+    <state x="121" y="100" width="1152" height="701" key="DiffContextDialog" timestamp="1596847894601">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="121" y="100" width="1152" height="701" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1596847894601" />
+    <state width="1387" height="307" key="GridCell.Tab.0.bottom" timestamp="1596848452646">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943766" />
-    <state width="1387" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596847124948" />
-    <state width="1387" height="307" key="GridCell.Tab.0.center" timestamp="1596847124947">
+    <state width="1387" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596848452646" />
+    <state width="1387" height="307" key="GridCell.Tab.0.center" timestamp="1596848452645">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943765" />
-    <state width="1387" height="307" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1596847124947" />
-    <state width="1387" height="307" key="GridCell.Tab.0.left" timestamp="1596847124947">
+    <state width="1387" height="307" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1596848452645" />
+    <state width="1387" height="307" key="GridCell.Tab.0.left" timestamp="1596848452645">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943764" />
-    <state width="1387" height="307" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1596847124947" />
-    <state width="1387" height="307" key="GridCell.Tab.0.right" timestamp="1596847124948">
+    <state width="1387" height="307" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1596848452644" />
+    <state width="1387" height="307" key="GridCell.Tab.0.right" timestamp="1596848452646">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943765" />
-    <state width="1387" height="307" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1596847124948" />
+    <state width="1387" height="307" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1596848452646" />
+    <state x="210" y="114" width="974" height="694" key="RollbackChangesDialog" timestamp="1596847389562">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="210" y="114" width="974" height="694" key="RollbackChangesDialog/0.23.1440.877@0.23.1440.877" timestamp="1596847389562" />
     <state x="80" y="23" width="1199" height="877" key="SettingsEditor" timestamp="1596725322104">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -384,11 +337,15 @@
     </state>
     <state x="382" y="138" width="681" height="655" key="StructurePopup/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596731128897" />
     <state x="382" y="138" width="681" height="655" key="StructurePopup/0.23.1440.877@0.23.1440.877" timestamp="1596808640422" />
-    <state width="625" height="614" key="SwitcherDM" timestamp="1596809963507">
+    <state width="625" height="614" key="SwitcherDM" timestamp="1596847472259">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="625" height="614" key="SwitcherDM/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596809963507" />
-    <state width="625" height="614" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1596808652343" />
+    <state width="625" height="614" key="SwitcherDM/0.23.1440.877@0.23.1440.877" timestamp="1596847472259" />
+    <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1596847894601">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.23.1440.877@0.23.1440.877" timestamp="1596847894601" />
     <state x="337" y="345" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1596846377466">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

@@ -21,7 +21,7 @@ public class CustomerDaoImplTest {
     } catch (Exception e) {
       e.printStackTrace();
     } finally {
-      JdbcUtils.closeResource(conn, null);
+      JdbcUtils.closeQuietly(conn);
     }
   }
 
@@ -36,7 +36,7 @@ public class CustomerDaoImplTest {
     } catch (Exception e) {
       e.printStackTrace();
     } finally {
-      JdbcUtils.closeResource(conn, null);
+      JdbcUtils.closeQuietly(conn);
     }
   }
 
@@ -51,7 +51,7 @@ public class CustomerDaoImplTest {
     } catch (Exception e) {
       e.printStackTrace();
     } finally {
-      JdbcUtils.closeResource(conn, null);
+      JdbcUtils.closeQuietly(conn);
     }
   }
 
@@ -66,7 +66,7 @@ public class CustomerDaoImplTest {
     } catch (Exception e) {
       e.printStackTrace();
     } finally {
-      JdbcUtils.closeResource(conn, null);
+      JdbcUtils.closeQuietly(conn);
     }
   }
 
@@ -80,7 +80,7 @@ public class CustomerDaoImplTest {
     } catch (Exception e) {
       e.printStackTrace();
     } finally {
-      JdbcUtils.closeResource(conn, null);
+      JdbcUtils.closeQuietly(conn);
     }
   }
 
@@ -94,7 +94,7 @@ public class CustomerDaoImplTest {
     } catch (Exception e) {
       e.printStackTrace();
     } finally {
-      JdbcUtils.closeResource(conn, null);
+      JdbcUtils.closeQuietly(conn);
     }
   }
 
@@ -108,7 +108,7 @@ public class CustomerDaoImplTest {
     } catch (Exception e) {
       e.printStackTrace();
     } finally {
-      JdbcUtils.closeResource(conn, null);
+      JdbcUtils.closeQuietly(conn);
     }
   }
 }

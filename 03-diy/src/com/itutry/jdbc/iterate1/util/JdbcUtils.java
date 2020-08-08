@@ -32,14 +32,7 @@ public class JdbcUtils {
     return dataSource.getConnection();
   }
 
-  public static void closeResource(Connection conn, Statement ps) {
-    if (ps != null) {
-      try {
-        ps.close();
-      } catch (SQLException e) {
-        e.printStackTrace();
-      }
-    }
+  public static void closeQuietly(Connection conn) {
     if (conn != null) {
       try {
         conn.close();
@@ -49,7 +42,27 @@ public class JdbcUtils {
     }
   }
 
-  public static void closeResource(Connection conn, Statement ps, ResultSet rs) {
+  public static void closeQuietly(Statement ps) {
+    if (ps != null) {
+      try {
+        ps.close();
+      } catch (SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+
+  public static void closeQuietly(ResultSet rs) {
+    if (rs != null) {
+      try {
+        rs.close();
+      } catch (SQLException e) {
+        e.printStackTrace();
+      }
+    }
+  }
+
+  public static void closeQuietly(Connection conn, Statement ps, ResultSet rs) {
     if (ps != null) {
       try {
         ps.close();
