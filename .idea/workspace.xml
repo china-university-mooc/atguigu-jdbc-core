@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="553c3a4c-fb1a-41dc-8636-9a3398100a28" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/ColumnMeta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/util/TableMeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/AbstractDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/CustomerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/CustomerDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/OrderDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/OrderDaoImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/sql/CountStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/sql/DeleteByIdStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/sql/GetAllStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/sql/GetByIdStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/sql/InsertStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/sql/SqlStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/sql/UpdateStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/AbstractDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/AbstractDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/ColumnMeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/meta/ColumnMeta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/TableMeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/03-diy/src/com/itutry/jdbc/iterate1/dao/meta/TableMeta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +54,9 @@
         <option value="JUnit5 Test Class" />
         <option value="Tag Library Descriptor" />
         <option value="FxmlFile" />
-        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -125,7 +129,7 @@
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="JUnit.OrderDaoImplTest.test6">
+  <component name="RunManager" selected="JUnit.OrderDaoImplTest.test1">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -136,7 +140,7 @@
       <module name="03-diy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itutry.jdbc.iterate1.*" />
+          <option name="PATTERN" value="com.itutry.jdbc.iterate1.dao.meta.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,7 +156,7 @@
       <module name="03-diy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itutry.jdbc.iterate1.*" />
+          <option name="PATTERN" value="com.itutry.jdbc.iterate1.dao.meta.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,7 +169,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderDaoImplTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderDaoImplTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="03-diy" />
       <extension name="coverage">
         <pattern>
@@ -175,7 +179,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.itutry.jdbc.iterate1" />
       <option name="MAIN_CLASS_NAME" value="com.itutry.jdbc.iterate1.OrderDaoImplTest" />
-      <option name="METHOD_NAME" value="test4" />
+      <option name="METHOD_NAME" value="test3" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -186,7 +190,7 @@
       <module name="03-diy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itutry.jdbc.iterate1.*" />
+          <option name="PATTERN" value="com.itutry.jdbc.iterate1.dao.meta.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -203,7 +207,7 @@
       <module name="03-diy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itutry.jdbc.iterate1.*" />
+          <option name="PATTERN" value="com.itutry.jdbc.iterate1.dao.meta.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -234,11 +238,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OrderDaoImplTest.test6" />
         <item itemvalue="JUnit.OrderDaoImplTest.test1" />
-        <item itemvalue="JUnit.OrderDaoImplTest" />
         <item itemvalue="JUnit.OrderDaoImplTest.test5" />
-        <item itemvalue="JUnit.OrderDaoImplTest.test4" />
+        <item itemvalue="JUnit.OrderDaoImplTest.test3" />
+        <item itemvalue="JUnit.OrderDaoImplTest.test6" />
+        <item itemvalue="JUnit.OrderDaoImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -279,7 +283,7 @@
       <workItem from="1596635625968" duration="77000" />
       <workItem from="1596635734272" duration="22766000" />
       <workItem from="1596705118361" duration="23225000" />
-      <workItem from="1596790887003" duration="24651000" />
+      <workItem from="1596790887003" duration="26548000" />
     </task>
     <servers />
   </component>
@@ -291,40 +295,40 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="320" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596634890885" />
-    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1596858653823">
+    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1596861753495">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596734538046" />
-    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1596858653823" />
-    <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596856828909">
+    <state x="489" y="119" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1596861753495" />
+    <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596861209380">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596646423271" />
-    <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1596856828909" />
+    <state x="421" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1596861209380" />
     <state x="121" y="100" width="1152" height="701" key="DiffContextDialog" timestamp="1596847894601">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="121" y="100" width="1152" height="701" key="DiffContextDialog/0.23.1440.877@0.23.1440.877" timestamp="1596847894601" />
-    <state width="1387" height="233" key="GridCell.Tab.0.bottom" timestamp="1596860296234">
+    <state width="1387" height="233" key="GridCell.Tab.0.bottom" timestamp="1596862139753">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.bottom/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943766" />
-    <state width="1387" height="233" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596860296234" />
-    <state width="1387" height="233" key="GridCell.Tab.0.center" timestamp="1596860296233">
+    <state width="1387" height="233" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596862139753" />
+    <state width="1387" height="233" key="GridCell.Tab.0.center" timestamp="1596862139752">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.center/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943765" />
-    <state width="1387" height="233" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1596860296233" />
-    <state width="1387" height="233" key="GridCell.Tab.0.left" timestamp="1596860296232">
+    <state width="1387" height="233" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1596862139752" />
+    <state width="1387" height="233" key="GridCell.Tab.0.left" timestamp="1596862139752">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.left/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943764" />
-    <state width="1387" height="233" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1596860296232" />
-    <state width="1387" height="233" key="GridCell.Tab.0.right" timestamp="1596860296233">
+    <state width="1387" height="233" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1596862139752" />
+    <state width="1387" height="233" key="GridCell.Tab.0.right" timestamp="1596862139753">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1387" height="307" key="GridCell.Tab.0.right/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596813943765" />
-    <state width="1387" height="233" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1596860296233" />
+    <state width="1387" height="233" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1596862139753" />
     <state x="387" y="108" width="665" height="698" key="RefactorJ.ExtractClass" timestamp="1596857436976">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -379,10 +383,10 @@
     </state>
     <state x="0" y="23" key="new project wizard/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596634417649" />
     <state x="0" y="23" key="new project wizard/0.23.1440.877@0.23.1440.877" timestamp="1596845988798" />
-    <state x="301" y="23" width="838" height="877" key="search.everywhere.popup" timestamp="1596811726055">
+    <state x="301" y="23" width="838" height="877" key="search.everywhere.popup" timestamp="1596860576094">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="301" y="23" width="838" height="877" key="search.everywhere.popup/0.23.1440.877/-1920.23.1920.1057@0.23.1440.877" timestamp="1596811726055" />
-    <state x="301" y="23" width="838" height="877" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1596608443250" />
+    <state x="301" y="23" width="838" height="877" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1596860576094" />
   </component>
 </project>

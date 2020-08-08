@@ -1,5 +1,12 @@
 package com.itutry.jdbc.iterate1.dao;
 
+import com.itutry.jdbc.iterate1.dao.meta.TableMeta;
+import com.itutry.jdbc.iterate1.dao.sql.CountStatement;
+import com.itutry.jdbc.iterate1.dao.sql.DeleteByIdStatement;
+import com.itutry.jdbc.iterate1.dao.sql.GetAllStatement;
+import com.itutry.jdbc.iterate1.dao.sql.GetByIdStatement;
+import com.itutry.jdbc.iterate1.dao.sql.InsertStatement;
+import com.itutry.jdbc.iterate1.dao.sql.UpdateStatement;
 import com.itutry.jdbc.iterate1.util.BeanListResultSetHandler;
 import com.itutry.jdbc.iterate1.util.BeanResultSetHandler;
 import com.itutry.jdbc.iterate1.util.JdbcUtils;
@@ -11,20 +18,11 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 封装了针对数据表的通用操作
  */
 public abstract class AbstractDao<T> implements Dao<T> {
-
-  private static final String ID = "id";
-  public static final String INSERT_TEMPLATE = "insert into `%s`(%s) values (%s)";
-  public static final String DELETE_BY_ID_TEMPLATE = "delete from `%s` where %s";
-  public static final String UPDATE_BY_ID_TEMPLATE = "update `%s` set %s where %s";
-  public static final String GET_BY_ID_TEMPLATE = "select %s from `%s` where %s";
-  public static final String GET_ALL_TEMPLATE = "select %s from `%s`";
-  public static final String COUNT_TEMPLATE = "select count(*) from `%s`";
 
   private final Class<T> type;
   private final TableMeta table;
@@ -37,64 +35,39 @@ public abstract class AbstractDao<T> implements Dao<T> {
   }
 
   public int insert(Connection conn, T obj) {
-    String insertClause = table.getColumns().stream()
-        .map(ColumnMeta::getName)
-        .collect(Collectors.joining(", "));
-    String placeholderStr = table.getColumns().stream()
-        .map(field -> "?")
-        .collect(Collectors.joining(","));
-    Object[] values = table.getValues(obj).toArray();
-
-    String sql = String.format(INSERT_TEMPLATE, table.getName(), insertClause, placeholderStr);
-    System.out.println(sql);
-    return update(conn, sql, values);
+    InsertStatement stat = new InsertStatement(table, obj);
+    System.out.println(stat);
+    return update(conn, stat.getSql(), stat.getParams());
   }
 
   public int update(Connection conn, T obj) {
-    String setClause = table.getPlainColumns().stream()
-        .map(c -> c.getName() + " = ?")
-        .collect(Collectors.joining(", "));
-    String whereClause = table.getIdColumn().getName() + " = ?";
-
-    List<Object> values = table.getPlainValues(obj);
-    values.add(table.getIdValue(obj));
-
-    String sql = String.format(UPDATE_BY_ID_TEMPLATE, table.getName(), setClause, whereClause);
-    System.out.println(sql);
-    return update(conn, sql, values.toArray());
+    UpdateStatement stat = new UpdateStatement(table, obj);
+    System.out.println(stat.getSql());
+    return update(conn, stat.getSql(), stat.getParams());
   }
 
   public int deleteById(Connection conn, Object id) {
-    String whereClause = table.getIdColumn().getName() + " = ?";
-    String sql = String.format(DELETE_BY_ID_TEMPLATE, table.getName(), whereClause);
-    System.out.println(sql);
-    return update(conn, sql, id);
+    DeleteByIdStatement stat = new DeleteByIdStatement(table, id);
+    System.out.println(stat.getSql());
+    return update(conn, stat.getSql(), stat.getParams());
   }
 
   public T getById(Connection conn, Object id) {
-    String whereClause = table.getIdColumn().getName() + " = ?";
-    String sql = String
-        .format(GET_BY_ID_TEMPLATE, getSelectClause(), table.getName(), whereClause);
-    System.out.println(sql);
-    return queryBean(conn, sql, id);
+    GetByIdStatement stat = new GetByIdStatement(table, id);
+    System.out.println(stat.getSql());
+    return queryBean(conn, stat.getSql(), stat.getParams());
   }
 
   public List<T> getAll(Connection conn) {
-    String sql = String.format(GET_ALL_TEMPLATE, getSelectClause(), table.getName());
-    System.out.println(sql);
-    return queryBeanList(conn, sql);
+    GetAllStatement stat = new GetAllStatement(table);
+    System.out.println(stat.getSql());
+    return queryBeanList(conn, stat.getSql(), stat.getParams());
   }
 
   public Long count(Connection conn) {
-    String sql = String.format(COUNT_TEMPLATE, table.getName());
-    System.out.println(sql);
-    return queryValue(conn, sql);
-  }
-
-  private String getSelectClause() {
-    return table.getColumns().stream()
-        .map(c -> c.getName() + " " + c.getLabel())
-        .collect(Collectors.joining(", "));
+    CountStatement stat = new CountStatement(table);
+    System.out.println(stat.getSql());
+    return queryValue(conn, stat.getSql(), stat.getParams());
   }
 
   protected int update(Connection conn, String sql, Object... args) {

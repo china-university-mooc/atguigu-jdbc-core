@@ -1,4 +1,4 @@
-package com.itutry.jdbc.iterate1.dao;
+package com.itutry.jdbc.iterate1.dao.meta;
 
 import com.itutry.jdbc.iterate1.annotaion.Id;
 import com.itutry.jdbc.iterate1.annotaion.Table;

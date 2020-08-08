@@ -58,7 +58,7 @@ public class OrderDaoImplTest {
 
   @Test
   public void test5() {
-    int rows = dao.deleteById(conn, 6);
+    int rows = dao.deleteById(conn, 7);
     System.out.println(rows);
   }
 
