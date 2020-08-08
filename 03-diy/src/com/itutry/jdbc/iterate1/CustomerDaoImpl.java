@@ -9,6 +9,6 @@ public class CustomerDaoImpl extends AbstractDao<Customer> implements CustomerDa
   @Override
   public Date getMaxBirth(Connection conn) {
     String sql = "select max(birth) from customers";
-    return getValue(conn, sql);
+    return queryValue(conn, sql);
   }
 }

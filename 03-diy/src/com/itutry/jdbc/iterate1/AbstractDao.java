@@ -1,19 +1,16 @@
 package com.itutry.jdbc.iterate1;
 
-import com.itutry.jdbc.iterate1.annotaion.Column;
-import com.itutry.jdbc.iterate1.annotaion.Id;
-import com.itutry.jdbc.iterate1.annotaion.Table;
 import com.itutry.jdbc.iterate1.util.BeanListResultSetHandler;
 import com.itutry.jdbc.iterate1.util.BeanResultSetHandler;
+import com.itutry.jdbc.iterate1.util.ColumnMeta;
 import com.itutry.jdbc.iterate1.util.JdbcUtils;
 import com.itutry.jdbc.iterate1.util.QueryUtils;
 import com.itutry.jdbc.iterate1.util.ScalarResultSetHandler;
-import java.lang.reflect.Field;
+import com.itutry.jdbc.iterate1.util.TableMeta;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -32,134 +29,74 @@ public abstract class AbstractDao<T> implements Dao<T> {
   public static final String COUNT_TEMPLATE = "select count(*) from `%s`";
 
   private final Class<T> type;
+  private final TableMeta table;
 
   public AbstractDao() {
     ParameterizedType genericSuperclass = (ParameterizedType) getClass().getGenericSuperclass();
     Type[] actualTypeArguments = genericSuperclass.getActualTypeArguments();
     type = (Class<T>) actualTypeArguments[0];
+    table = new TableMeta(type);
   }
 
   public int insert(Connection conn, T obj) {
-    Field[] fields = type.getDeclaredFields();
-    String insertClause = Arrays.stream(fields)
-        .map(this::getColumnName)
+    String insertClause = table.getColumns().stream()
+        .map(ColumnMeta::getName)
         .collect(Collectors.joining(", "));
-    String placeholderStr = Arrays.stream(fields)
+    String placeholderStr = table.getColumns().stream()
         .map(field -> "?")
         .collect(Collectors.joining(","));
-    Object[] values = getValues(obj, Arrays.asList(fields));
+    Object[] values = table.getValues(obj).toArray();
 
-    String sql = String.format(INSERT_TEMPLATE, getTableName(type), insertClause, placeholderStr);
+    String sql = String.format(INSERT_TEMPLATE, table.getName(), insertClause, placeholderStr);
     System.out.println(sql);
     return update(conn, sql, values);
   }
 
+  public int update(Connection conn, T obj) {
+    String setClause = table.getPlainColumns().stream()
+        .map(c -> c.getName() + " = ?")
+        .collect(Collectors.joining(", "));
+    String whereClause = table.getIdColumn().getName() + " = ?";
+
+    List<Object> values = table.getPlainValues(obj);
+    values.add(table.getIdValue(obj));
+
+    String sql = String.format(UPDATE_BY_ID_TEMPLATE, table.getName(), setClause, whereClause);
+    System.out.println(sql);
+    return update(conn, sql, values.toArray());
+  }
+
   public int deleteById(Connection conn, Object id) {
-    String whereClause = getColumnName(getIdField(type)) + " = ?";
-    String sql = String.format(DELETE_BY_ID_TEMPLATE, getTableName(type), whereClause);
+    String whereClause = table.getIdColumn().getName() + " = ?";
+    String sql = String.format(DELETE_BY_ID_TEMPLATE, table.getName(), whereClause);
     System.out.println(sql);
     return update(conn, sql, id);
   }
 
-  public int update(Connection conn, T obj) {
-    String setClause = getOtherFields(type).stream()
-        .map(field -> getColumnName(field) + " = ?")
-        .collect(Collectors.joining(", "));
-
-    String whereClause = getColumnName(getIdField(type)) + " = ?";
-
-    List<Field> fields = getOtherFields(type);
-    fields.add(getIdField(type));
-    Object[] values = getValues(obj, fields);
-
-    String sql = String.format(UPDATE_BY_ID_TEMPLATE, getTableName(type), setClause, whereClause);
-    System.out.println(sql);
-    return update(conn, sql, values);
-  }
-
   public T getById(Connection conn, Object id) {
-    String whereClause = getColumnName(getIdField(type)) + " = ?";
-    String sql = String.format(GET_BY_ID_TEMPLATE, getSelectionStr(type), getTableName(type), whereClause);
+    String whereClause = table.getIdColumn().getName() + " = ?";
+    String sql = String
+        .format(GET_BY_ID_TEMPLATE, getSelectClause(), table.getName(), whereClause);
     System.out.println(sql);
-    return getInstance(conn, sql, id);
+    return queryBean(conn, sql, id);
   }
 
   public List<T> getAll(Connection conn) {
-    String sql = String.format(GET_ALL_TEMPLATE, getSelectionStr(type), getTableName(type));
+    String sql = String.format(GET_ALL_TEMPLATE, getSelectClause(), table.getName());
     System.out.println(sql);
-    return getForList(conn, sql);
+    return queryBeanList(conn, sql);
   }
 
   public Long count(Connection conn) {
-    String sql = String.format(COUNT_TEMPLATE, getTableName(type));
+    String sql = String.format(COUNT_TEMPLATE, table.getName());
     System.out.println(sql);
-    return getValue(conn, sql);
+    return queryValue(conn, sql);
   }
 
-  private Object[] getValues(Object obj, List<Field> fields) {
-    return fields.stream()
-        .map(f -> getValue(obj, f))
-        .toArray(Object[]::new);
-  }
-
-  private Object getValue(Object obj, Field field) {
-    Object value = null;
-    try {
-      field.setAccessible(true);
-      value = field.get(obj);
-    } catch (IllegalAccessException e) {
-      JdbcUtils.quietlyHandleException(e);
-    }
-    return value;
-  }
-
-  private Field getIdField(Class<?> type) {
-    List<Field> fields = Arrays.stream(type.getDeclaredFields())
-        .filter(this::isIdField)
-        .collect(Collectors.toList());
-    if (fields.size() == 1) {
-      return fields.get(0);
-    }
-
-    throw new RuntimeException("表中ID列的个数不为一");
-  }
-
-  private boolean isIdField(Field field) {
-    boolean hasAnno = Arrays.stream(field.getAnnotations())
-        .anyMatch(a -> a instanceof Id);
-    return hasAnno || ID.equalsIgnoreCase(field.getName());
-  }
-
-  private List<Field> getOtherFields(Class<?> type) {
-    return Arrays.stream(type.getDeclaredFields())
-        .filter(field -> !isIdField(field))
-        .collect(Collectors.toList());
-  }
-
-  private String getSelectionStr(Class type) {
-    return Arrays.stream(type.getDeclaredFields())
-        .map(field -> getColumnName(field) + " " + getColumnLabel(field))
+  private String getSelectClause() {
+    return table.getColumns().stream()
+        .map(c -> c.getName() + " " + c.getLabel())
         .collect(Collectors.joining(", "));
-  }
-
-  private String getTableName(Class type) {
-    return Arrays.stream(type.getAnnotations())
-        .filter(a -> a instanceof Table)
-        .findFirst()
-        .map(a -> ((Table) a).value())
-        .orElse(type.getSimpleName());
-  }
-
-  private String getColumnName(Field field) {
-    return Arrays.stream(field.getAnnotations())
-        .filter(a -> a instanceof Column)
-        .map(a -> ((Column) a).value())
-        .findFirst()
-        .orElse(field.getName());
-  }
-
-  public String getColumnLabel(Field field) {
-    return field.getName();
   }
 
   protected int update(Connection conn, String sql, Object... args) {
@@ -171,7 +108,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
     return 0;
   }
 
-  protected T getInstance(Connection conn, String sql, Object... args) {
+  protected T queryBean(Connection conn, String sql, Object... args) {
     try {
       BeanResultSetHandler<T> handler = new BeanResultSetHandler<>(type);
       return QueryUtils.query(conn, handler, sql, args);
@@ -181,7 +118,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
     return null;
   }
 
-  protected List<T> getForList(Connection conn, String sql, Object... args) {
+  protected List<T> queryBeanList(Connection conn, String sql, Object... args) {
     try {
       BeanListResultSetHandler<T> handler = new BeanListResultSetHandler<>(type);
       return QueryUtils.query(conn, handler, sql, args);
@@ -191,7 +128,7 @@ public abstract class AbstractDao<T> implements Dao<T> {
     return Collections.emptyList();
   }
 
-  protected <E> E getValue(Connection conn, String sql, Object... args) {
+  protected <E> E queryValue(Connection conn, String sql, Object... args) {
     try {
       ScalarResultSetHandler handler = new ScalarResultSetHandler();
       @SuppressWarnings("unchecked")

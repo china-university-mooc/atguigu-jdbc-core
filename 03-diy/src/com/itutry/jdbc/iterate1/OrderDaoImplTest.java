@@ -1,5 +1,6 @@
 package com.itutry.jdbc.iterate1;
 
+import com.itutry.jdbc.iterate1.annotaion.Table;
 import com.itutry.jdbc.iterate1.bean.Order;
 import com.itutry.jdbc.iterate1.util.JdbcUtils;
 import java.sql.Connection;
@@ -50,14 +51,14 @@ public class OrderDaoImplTest {
 
   @Test
   public void test4() {
-    Order order = new Order(5, "JJ", new Date(1234567890L));
+    Order order = new Order(6, "JJ", new Date(1234567890L));
     int rows = dao.update(conn, order);
     System.out.println(rows);
   }
 
   @Test
   public void test5() {
-    int rows = dao.deleteById(conn, 5);
+    int rows = dao.deleteById(conn, 6);
     System.out.println(rows);
   }
 
